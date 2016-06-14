@@ -11,7 +11,7 @@ candies = [
   {id: 2, name: "Pez"         , color: "Green" },
   {id: 3, name: "Marshmallow" , color: "Pink"  },
   {id: 4, name: "Candy Stick" , color: "Blue"  }
-]
+];
 
 // http://127.0.0.1:3000/candies
 router.route('/')
@@ -21,7 +21,7 @@ router.route('/')
   })
   // CREATE
   .post(function(req, res) {
-    candies.push(req.body)
+    candies.push(req.body);
     res.json(req.body);
   });
 
@@ -30,15 +30,15 @@ router.route('/:id')
   // SHOW
   .get(function(req,res){
     candy = candies.filter(function(element){
-      return element["id"] == req.params.id
-    })[0]
-    res.json(candy)
+      return element["id"] == req.params.id;
+    })[0];
+    res.json(candy);
   })
   // DELETE
   .delete(function(req, res){
-    for(i in candies){
+    for(var i in candies){
       if(candies[i]["id"] == req.params.id){
-        delete candies[i]
+        delete candies[i];
       }
     }
     res.json({message : 'deleted' });
@@ -48,12 +48,12 @@ router.route('/:id')
 // http://127.0.0.1:3000/candies/:id
 router.route('/:id/edit')
   .put(function(req, res) {
-    for (i in candies) {
-      if (candies[i]["id"] == req.params.id) { candies[i] = req.body }
+    for (var i in candies) {
+      if (candies[i]["id"] == req.params.id) { candies[i] = req.body; }
     }
     res.format({
       json: function(){ res.json(req.body); }
-    })
-  })
+    });
+  });
 
-module.exports = router
+module.exports = router;
