@@ -1,0 +1,23 @@
+{
+  "name": "lab-express-routing",
+  "version": "1.0.0",
+  "description": "## Introduction",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwokrobyn/lab-express-routing.git"
+  },
+  "author": "Robyn Kwok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwokrobyn/lab-express-routing/issues"
+  },
+  "homepage": "https://github.com/kwokrobyn/lab-express-routing#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
